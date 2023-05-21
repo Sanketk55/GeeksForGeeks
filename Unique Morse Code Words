@@ -1,0 +1,29 @@
+class Solution {
+public:
+    int uniqueMorseRepresentations(vector<string>& words) {
+        vector<string>codes{".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
+
+        map<char,string>m;
+        set<string>s;
+        int j=0;
+        // assign morse code to each alphabet
+        for(int i=97;i<=122;i++)
+        {
+            m[(char)i]=codes[j++];
+        }
+        
+        for(auto &i:words)
+        {
+            string temp=i;
+            string morse="";
+            // create morse code for each word
+            for(int j=0;j<temp.size();j++)
+                morse+=m[temp[j]];
+
+            // inserting morse code in set
+            s.insert(morse);
+        }
+            return s.size();
+    }
+
+};
