@@ -41,7 +41,7 @@ class Solution
     public:
     void findPreSuc(Node* root, Node*& pre, Node*& suc, int key)
     {
-        // Your code goes here
+        // base condition where only root is present in tree.
         if(!root->left && !root->right)
         {
             if(root->key < key) pre=root;
@@ -55,11 +55,14 @@ class Solution
         q.push(root);
         vector<int>keys;
         
+	// using inorder traversal
         while(!q.empty())
         {
             Node* temp=q.front();
             q.pop();
+	    // mapping nodes according to their values
             m[temp]=temp->key;
+	    // pushing values of each node to find pre and suc values
             keys.push_back(temp->key);
             
             if(temp->left)q.push(temp->left);
@@ -70,6 +73,7 @@ class Solution
         sort(keys.begin(),keys.end());
      
         bool flag=true;
+	// finding pre and suc values
         for(auto i:keys)
         {
             if(i<key) min_val=i;
@@ -78,12 +82,12 @@ class Solution
                 flag=false;
             }
         }
+	// matching suc and pre values to their nodes in map
         for(auto& i:m)
         {
             if(i.second==min_val) pre=i.first;
             else if(i.second==max_val) suc=i.first;
         }
-        // cout<<pre->key<<" "<<suc->key<<endl;
         
     }
 };
