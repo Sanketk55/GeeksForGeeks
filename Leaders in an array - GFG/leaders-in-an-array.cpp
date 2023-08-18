@@ -13,21 +13,23 @@ class Solution{
     public:
     vector<int> leaders(int a[], int n){
         // Code here
-        vector<int>ans;
-        int maxEle=INT_MIN;
-        
-        for(int i=n-1;i>=0;i--){
-            if(a[i]>=maxEle){
-                maxEle=a[i];
-                ans.push_back(maxEle);
+        vector<int> ans;
+        int leader=a[n-1];
+        ans.push_back(leader);
+        for(int i=n-2;i>=0;i--)
+        {
+            
+            if(a[i]>=leader)
+            {
+                leader=a[i];
+                ans.push_back(leader);
             }
+            
+            
         }
-        int i=0,j=ans.size()-1;
-        while(i<=j){
-            swap(ans[i],ans[j]);
-            i++;j--;
-        }
+        reverse(ans.begin(),ans.end());
         return ans;
+        
     }
 };
 
