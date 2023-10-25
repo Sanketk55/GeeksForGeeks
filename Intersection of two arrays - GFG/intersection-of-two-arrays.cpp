@@ -17,18 +17,14 @@ class Solution {
         unordered_map<int,int>mp;
         if(n<m){
             for(int i=0;i<n;i++){
-                if(mp.find(a[i])==mp.end()){
-                    mp[a[i]]=1;
-                }
+                mp[a[i]]=1;
             }
             for(int i=0;i<m;i++) if(mp.find(b[i])!=mp.end() && mp[b[i]]>0){cnt++;mp[b[i]]--;}
 
         }
         else{
             for(int i=0;i<m;i++){
-                if(mp.find(b[i])==mp.end()){
-                    mp[b[i]]=1;
-                }
+                mp[b[i]]=1;
             }
             for(int i=0;i<n;i++) if(mp.find(a[i])!=mp.end() && mp[a[i]]>0){cnt++;mp[a[i]]--;}
         }
