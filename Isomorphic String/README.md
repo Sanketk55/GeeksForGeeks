@@ -1,28 +1,32 @@
-# Adding Ones
-## Easy
-<div class="problems_problem_content__Xm_eO"><p><span style="font-size: 18px;">You start with an array <strong>A</strong> of size <strong>N</strong>. Initially all elements of the array A are <strong>zero</strong>. You will be given <strong>K</strong> positive integers. Let <strong>j</strong> be one of these integers, you have to add <strong>1</strong> to all <strong>A[i]</strong>, where <strong>i ≥ j</strong>. Your task is to print the array A after all these <strong>K</strong> updates are done. <br><strong>Note:</strong> 1-based indexing is used everywhere in this question.</span></p>
-<p><span style="font-size: 18px;"><strong>Example 1: </strong></span></p>
-<pre><span style="font-size: 18px;"><strong>Input:</strong>
-N = 3, K = 4
-1 1 2 3
-<strong>Output:</strong>
-2 3 4
-<strong>Explanation:</strong>
-Initially the array is {0, 0, 0}. After the
-first 1, it becomes {1, 1, 1}. After the
-second 1 it becomes {2, 2, 2}. After 2, <br>it becomes {2, 3, 3} and <br>After 3 it becomes, {2, 3, 4}. </span></pre>
-<p><span style="font-size: 18px;"><strong>Example 2: </strong></span></p>
-<pre><span style="font-size: 18px;"><strong>Input:</strong>
-N = 2, K = 3
-1 1 1
-<strong>Output:</strong>
-3 3 
-<strong>Explanation:</strong>
-Initially the array is {0, 0}. After the
-first 1, it becomes {1, 1}. After the
-second 1 it becomes {2, 2}. After the
-third 1, it becomes {3, 3}.</span></pre>
-<p><span style="font-size: 18px;"><strong>Your Task:&nbsp;&nbsp;</strong><br>You don't need to read input or print anything. Your task is to complete the function&nbsp;<strong>update()</strong>&nbsp;which takes the array <strong>A[]</strong> and its size <strong>N</strong><strong> </strong>as inputs and make the updates and fill the array <strong>A[].</strong></span></p>
-<p><span style="font-size: 18px;"><strong>Expected Time Complexity: </strong>O(N)<br><strong>Expected Auxiliary Space: </strong>O(1)</span></p>
-<p><span style="font-size: 18px;"><strong>Constraints:</strong><br>1 ≤ N, K ≤ 10<sup>5</sup></span></p>
-<p><span style="font-size: 18px;">1<sup>&nbsp;</sup>≤ updates[i]&nbsp;≤ N, for all i from 1 to N.</span></p></div>
+Given two strings 'str1' and 'str2', check if these two strings are isomorphic to each other.
+
+If the characters in str1 can be changed to get str2, then two strings, str1 and str2, are isomorphic. A character must be completely swapped out for another character while maintaining the order of the characters. A character may map to itself, but no two characters may map to the same character.
+
+Example 1:
+
+Input:
+str1 = aab
+str2 = xxy
+Output: 
+1
+Explanation: 
+There are two different characters in aab and xxy, i.e a and b with frequency 2 and 1 respectively.
+Example 2:
+
+Input:
+str1 = aab
+str2 = xyz
+Output: 
+0
+Explanation: 
+There are two different characters in aab but there are three different charactersin xyz. So there won't be one to one mapping between str1 and str2.
+Your Task:
+You don't need to read input or print anything.Your task is to complete the function areIsomorphic() which takes the string str1 and string str2 as input parameter and  check if two strings are isomorphic. The function returns true if strings are isomorphic else it returns false.
+
+Expected Time Complexity: O(|str1|+|str2|).
+Expected Auxiliary Space: O(Number of different characters).
+Note: |s| represents the length of string s.
+
+Constraints:
+1 <= |str1|, |str2| <= 105
+
