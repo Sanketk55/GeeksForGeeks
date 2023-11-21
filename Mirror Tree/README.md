@@ -1,3 +1,5 @@
+![Screenshot](screenshot.png)
+
 Mirror Tree
 
 Given a Binary Tree, convert it into its mirror.
@@ -45,3 +47,5 @@ Expected Auxiliary Space: O(Height of the Tree).
 Constraints:
 1 ≤ Number of nodes ≤ 105
 1 ≤ Data of a node ≤ 105
+
+
