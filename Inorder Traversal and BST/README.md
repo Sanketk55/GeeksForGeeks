@@ -1,1 +1,1 @@
-![Screenshot](is repeating.png)
+![Screenshot](screenshot.png)
